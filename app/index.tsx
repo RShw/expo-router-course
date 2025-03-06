@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { CustomLink } from "../components/CustomLink";
+import { DynamicLink } from "../components/DynamicLink";
 
 export default function Home() {
     return (
@@ -7,14 +7,14 @@ export default function Home() {
             <Text>Home</Text>
 
             {/* Go to /app/settings/index.tsx screen */}
-            <CustomLink
+            <DynamicLink
                 label="Go to Settings"
                 href="/settings"
             />
 
 
             {/* Go to /app/settings/index.tsx screen */}
-            <CustomLink
+            <DynamicLink
                 label="Go to Profile"
                 href="/profile"
             />
