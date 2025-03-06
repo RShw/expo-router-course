@@ -2,7 +2,6 @@
   "name": "expo-router-course",
   "version": "1.0.0",
   "main": "expo-router/entry",
-  "scheme": "expo-router-course",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
