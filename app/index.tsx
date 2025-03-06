@@ -1,23 +1,30 @@
-import { StyleSheet, Text, View } from "react-native";
-import { DynamicLink } from "../components/DynamicLink";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { router } from "expo-router";
 
 export default function Home() {
+
+    const searchParams = {
+        pathname: "/profile",
+        params: {
+            id: "123",
+            name: "Bob"
+        }
+    }
+
+    const navigate = () => {
+        router.navigate(searchParams)
+        console.log("Navigate to Profile")
+    }
+
     return (
         <View style={styles.container}>
             <Text>Home</Text>
 
-            {/* Go to /app/settings/index.tsx screen */}
-            <DynamicLink
-                label="Go to Settings"
-                href="/settings"
-            />
-
-
-            {/* Go to /app/settings/index.tsx screen */}
-            <DynamicLink
-                label="Go to Profile"
-                href="/profile"
-            />
+            <TouchableOpacity
+                onPress={navigate}
+            >
+                <Text>Go to Profile</Text>
+            </TouchableOpacity>
 
         </View>
     )

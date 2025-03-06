@@ -1,16 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
-import { CustomLink } from "../components/CustomLink";
+import { Link, useGlobalSearchParams } from "expo-router";
 
 export default function Profile() {
+
+    const props = useGlobalSearchParams();
+
+    console.log("index", props) // {"id": "123", "name": "Bob"}
+
     return (
         <View style={styles.container}>
-            <Text>Profile</Text>
+            <Text>Profile with ID : {props.id} {props.name}</Text>
 
             {/* Go Back screen */}
-            <CustomLink
-                label="Go back"
-                href="../"
-            />
+            <Link href="../">Go Back</Link>
+
         </View>
     )
 }
@@ -23,6 +26,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     }
 })
-
-
-
