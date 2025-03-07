@@ -1,8 +1,14 @@
+import { Stack } from 'expo-router';
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Tab() {
+export default function Settings() {
     return (
         <View style={styles.container}>
+            <Stack.Screen
+                options={{
+                    title: "Advance Settings",
+                }}
+            />
             <Text>Tab Settings</Text>
         </View>
     );
@@ -15,3 +21,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 });
+
+
+
+
+
+
